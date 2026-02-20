@@ -13,7 +13,6 @@ defmodule E2e.Place.Helper do
     |> Jason.decode!()
     |> Enum.chunk_every(500)
     |> Enum.each(fn batch ->
-      now = NaiveDateTime.utc_now() |> NaiveDateTime.truncate(:second)
 
       entries =
         Enum.map(batch, fn city ->
@@ -68,5 +67,6 @@ defmodule E2e.Place.Helper do
   end
 
   defp encode_embed(nil), do: nil
-  defp encode_embed(data), do: Jason.encode!(data)
+  defp encode_embed(data) when is_list(data), do: data
+  defp encode_embed(data) when is_map(data), do: data
 end
