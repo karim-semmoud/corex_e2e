@@ -1,0 +1,74 @@
+<.form
+  :let={f}
+  for={@changeset}
+  action={@action}
+  id={get_form_id(@changeset)}
+>
+  <.input field={f[:name]} type="text" label="Name" />
+  <.select
+    class="select"
+    field={f[:country]}
+    placeholder_text="Select a country"
+    collection={[
+      %{label: "France", id: "fra", disabled: true},
+      %{label: "Belgium", id: "bel"},
+      %{label: "Germany", id: "deu"},
+      %{label: "Netherlands", id: "nld"},
+      %{label: "Switzerland", id: "che"},
+      %{label: "Austria", id: "aut"}
+    ]}
+  >
+    <:label>
+      Your country of residence
+    </:label>
+    <:trigger>
+      <.icon name="hero-chevron-down" />
+    </:trigger>
+    <:error :let={msg}>
+      <.icon name="hero-exclamation-circle" class="icon" />
+      {msg}
+    </:error>
+  </.select>
+  <.date_picker field={f[:birth_date]} class="date-picker">
+    <:label>Select a date</:label>
+    <:trigger>
+      <.icon name="hero-calendar" class="icon" />
+    </:trigger>
+    <:prev_trigger>
+      <.icon name="hero-chevron-left" class="icon" />
+    </:prev_trigger>
+    <:next_trigger>
+      <.icon name="hero-chevron-right" class="icon" />
+    </:next_trigger>
+    <:error :let={msg}>
+      <.icon name="hero-exclamation-circle" class="icon" />
+      {msg}
+    </:error>
+  </.date_picker>
+  <.signature_pad field={f[:signature]} class="signature-pad">
+    <:label>Sign here</:label>
+    <:clear_trigger>
+      <.icon name="hero-x-mark" />
+    </:clear_trigger>
+    <:error :let={msg}>
+      <.icon name="hero-exclamation-circle" class="icon" />
+      {msg}
+    </:error>
+  </.signature_pad>
+  <.checkbox field={f[:terms]} class="checkbox">
+    <:label>
+      Accept the terms
+    </:label>
+    <:control>
+      <.icon name="hero-check" class="data-checked" />
+    </:control>
+    <:error :let={msg}>
+      <.icon name="hero-exclamation-circle" class="icon" />
+      {msg}
+    </:error>
+  </.checkbox>
+  <footer class="flex w-full justify-between gap-ui-gap">
+    <.button :if={@return_to} href={@return_to} class="button">Cancel</.button>
+    <.button class="button button--accent ">Save User</.button>
+  </footer>
+</.form>

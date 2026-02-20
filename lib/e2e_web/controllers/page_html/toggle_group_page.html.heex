@@ -1,0 +1,39 @@
+<Layouts.app flash={@flash} locale={@locale} current_path={@current_path}>
+  <div class="layout__row">
+    <h1>Toggle Group</h1>
+    <h2>Controller View</h2>
+  </div>
+  <h3>Client Api</h3>
+  <div class="layout__row">
+    <button
+      phx-click={Corex.ToggleGroup.set_value("my-toggle-group", ["lorem"])}
+      class="button button--sm"
+    >
+      Toggle Lorem
+    </button>
+    <button
+      phx-click={Corex.ToggleGroup.set_value("my-toggle-group", ["lorem", "donec"])}
+      class="button button--sm"
+    >
+      Toggle Lorem and Donec
+    </button>
+    <button
+      phx-click={Corex.ToggleGroup.set_value("my-toggle-group", [])}
+      class="button button--sm"
+    >
+      Toggle no items
+    </button>
+  </div>
+  <.toggle_group id="my-toggle-group" class="toggle-group">
+    <:item value="lorem">
+      Lorem
+    </:item>
+
+    <:item value="duis">
+      Duis
+    </:item>
+    <:item value="donec">
+      Donec
+    </:item>
+  </.toggle_group>
+</Layouts.app>

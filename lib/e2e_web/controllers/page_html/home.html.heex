@@ -1,0 +1,85 @@
+<Layouts.app flash={@flash} mode={@mode} locale={@locale} current_path={@current_path}>
+  <section class="gap-ui-sm sm:gap-ui md:gap-ui-lg py-ui sm:py-ui-lg md:py-ui-xl px-ui-padding-xl relative mx-auto flex max-w-(--container-ui-xl) flex-col justify-between">
+    <h1 class="my-0 text-4xl md:text-6xl">
+      Build <span class="text-root--success">fast</span>,
+      <span class="text-root--success">accessible</span>
+      and <span class="text-root--success">interactive</span>
+      websites
+      <span class="whitespace-nowrap">
+        with <span class="text-root--brand rounded-full whitespace-nowrap">Corex</span>
+      </span>
+    </h1>
+
+    <p class="md:text-ui-lg my-0">
+      From design tokens to accessible, interactive components, <br />
+      Corex provides a complete foundation for creating <br />
+      beautiful, scalable, and performant websites.
+    </p>
+    <div class="gap-ui-gap p-ui-padding flex flex-wrap justify-start">
+      <a
+        href="https://hexdocs.pm/corex"
+        target="_blank"
+        class="button button--brand md:button--lg w-full md:w-auto"
+      >
+        Hex Documentation
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          >
+          </path>
+        </svg>
+      </a>
+      <button
+        phx-click={Corex.Dialog.set_open("menu-dialog", true)}
+        class="button md:button--lg w-full md:w-auto lg:hidden"
+      >
+        Examples
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          >
+          </path>
+        </svg>
+      </button>
+      <.button
+        href={~p"/#{@locale}/accordion"}
+        class="button md:button--lg w-full md:w-auto hidden lg:flex"
+      >
+        Examples
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          >
+          </path>
+        </svg>
+      </.button>
+    </div>
+  </section>
+</Layouts.app>

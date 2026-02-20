@@ -1,0 +1,96 @@
+<Layouts.app flash={@flash} locale={@locale} current_path={@current_path}>
+  <h1>Toast</h1>
+  <h2>Controller View</h2>
+
+  <h3>Create Flash Message</h3>
+  <.form
+    :let={f}
+    for={@changeset}
+    as={:toast}
+    action={~p"/#{@locale}/toast"}
+    method="post"
+    id="toast-form"
+  >
+    <.input
+      field={f[:message]}
+      type="text"
+      label="Message"
+      placeholder="Enter flash message"
+      required
+    />
+
+    <.select
+      class="select"
+      field={f[:type]}
+      placeholder="Select flash type"
+      collection={[
+        %{label: "Info", id: "info"},
+        %{label: "Error", id: "error"}
+      ]}
+    >
+      <:label>Type</:label>
+      <:trigger>
+        <.icon name="hero-chevron-down" />
+      </:trigger>
+    </.select>
+
+    <footer class="flex w-full justify-end gap-ui-gap">
+      <.button class="button button--accent">Create Flash Message</.button>
+    </footer>
+  </.form>
+
+  <h3>Client Api</h3>
+  <div class="layout__row">
+    <button
+      phx-click={
+        Corex.Toast.create_toast(
+          "This is an info toast",
+          "This is an info toast description",
+          :info
+        )
+      }
+      class="button"
+    >
+      Create Info Toast
+    </button>
+
+    <button
+      phx-click={
+        Corex.Toast.create_toast(
+          "This is a success toast",
+          "This is a success toast description",
+          :success
+        )
+      }
+      class="button"
+    >
+      Succes Toast
+    </button>
+    <button
+      phx-click={
+        Corex.Toast.create_toast(
+          "This is a error toast",
+          "This is a error toast description",
+          :error
+        )
+      }
+      class="button"
+    >
+      Error Toast
+    </button>
+
+    <button
+      phx-click={
+        Corex.Toast.create_toast(
+          "This is a loading toast",
+          "This is a loading toast description",
+          :loading,
+          duration: :infinity
+        )
+      }
+      class="button"
+    >
+      Create Loading
+    </button>
+  </div>
+</Layouts.app>
