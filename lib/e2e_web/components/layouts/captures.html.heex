@@ -30,12 +30,12 @@
       name="keywords"
       content="User Interface, Accessibility, Vanilla JS, Corex, ZagJS, Elixir, Phoenix Framework, Live View"
     /> <meta name="theme-color" content="#F5F7FA" />
-    <link rel="icon" href={~p"/images/favicon.ico"} />
-    <link rel="apple-touch-icon" sizes="180x180" href={~p"/images/apple-touch-icon-180x180.png"} />
-    <link rel="icon" type="image/png" sizes="192x192" href={~p"/images/pwa-192x192.png"} />
-    <link rel="icon" type="image/png" sizes="512x512" href={~p"/images/pwa-512x512.png"} />
-    <link rel="mask-icon" href={~p"/images/maskable-icon-512x512.png"} color="#F5F7FA" />
-    <link rel="icon" type="image/png" sizes="64x64" href={~p"/images/pwa-64x64.png"} />
+    <link rel="icon" href={current_static_path("/images/favicon.ico")} />
+    <link rel="apple-touch-icon" sizes="180x180" href={current_static_path("/images/apple-touch-icon-180x180.png")} />
+    <link rel="icon" type="image/png" sizes="192x192" href={current_static_path("/images/pwa-192x192.png")} />
+    <link rel="icon" type="image/png" sizes="512x512" href={current_static_path("/images/pwa-512x512.png")} />
+    <link rel="mask-icon" href={current_static_path("/images/maskable-icon-512x512.png")} color="#F5F7FA" />
+    <link rel="icon" type="image/png" sizes="64x64" href={current_static_path("/images/pwa-64x64.png")} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://corex.gigalixirapp.com/" />
     <meta property="og:title" content="Corex Elixir Phoenix Framework Library" />
@@ -52,9 +52,9 @@
     />
     <meta name="twitter:image" content="https://corex.gigalixirapp.com/corex-ui-og.jpg" />
 
-    <link phx-track-static rel="stylesheet" href={~p"/assets/css/app.css"} />
+    <link phx-track-static rel="stylesheet" href={current_static_path("/assets/css/app.css")} />
 
-    <script defer phx-track-static type="module" src={~p"/assets/js/app.js"}>
+    <script defer phx-track-static type="module" src={current_static_path("/assets/js/app.js")}>
     </script>
 
     <script>
