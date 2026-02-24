@@ -3,7 +3,7 @@ defmodule E2e.MixProject do
 
   def project do
     [
-      app: :e2e,
+      app: :corex_web,
       version: "0.1.0",
       elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -67,7 +67,7 @@ defmodule E2e.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
       {:bandit, "~> 1.5"},
-      {:corex, "~> 0.1.0-alpha.27"},
+      {:corex, "~> 0.1.0-alpha.28"},
       {:makeup, "~> 1.2"},
       {:makeup_elixir, "~> 1.0.1 or ~> 1.1"},
       {:makeup_html, "~> 0.2"},
