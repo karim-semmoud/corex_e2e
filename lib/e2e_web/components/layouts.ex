@@ -11,11 +11,6 @@ defmodule E2eWeb.Layouts do
   # and other static content.
   embed_templates "layouts/*"
 
-  def current_static_path(path) do
-    endpoint = Application.get_env(:corex_web, :static_path_endpoint) || E2eWeb.Endpoint
-    Phoenix.Endpoint.static_path(endpoint, path)
-  end
-
   @doc """
   Renders your app layout.
 
