@@ -1,16 +1,15 @@
 defmodule E2eWeb.CarouselLive do
   use E2eWeb, :live_view
 
-  @items [
-    "/images/beach.jpg",
-    "/images/fall.jpg",
-    "/images/sand.jpg",
-    "/images/star.jpg",
-    "/images/winter.jpg"
-  ]
 
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, :carousel_items, @items)}
+    {:ok, assign(socket, :carousel_items, [
+      ~p"/images/beach.jpg",
+      ~p"/images/fall.jpg",
+      ~p"/images/sand.jpg",
+      ~p"/images/star.jpg",
+      ~p"/images/winter.jpg"
+    ])}
   end
 
   def render(assigns) do
