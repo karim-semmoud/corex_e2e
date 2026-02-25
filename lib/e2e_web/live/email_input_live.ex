@@ -26,7 +26,12 @@ defmodule E2eWeb.EmailInputLive do
         <.email_input id="email-basic" name="user[email]" class="email-input">
           <:label>Email</:label>
         </.email_input>
-        <.email_input id="email-placeholder" name="user[email]" class="email-input" placeholder="you@example.com">
+        <.email_input
+          id="email-placeholder"
+          name="user[email]"
+          class="email-input"
+          placeholder="you@example.com"
+        >
           <:label>Email</:label>
         </.email_input>
       </div>

@@ -51,7 +51,12 @@ defmodule E2eWeb.CarouselLive do
         </section>
         <section>
           <h3 class="font-ui-lg mb-micro">Vertical</h3>
-          <.carousel id="carousel-vertical" items={@carousel_items} orientation="vertical" class="carousel">
+          <.carousel
+            id="carousel-vertical"
+            items={@carousel_items}
+            orientation="vertical"
+            class="carousel"
+          >
             <:prev_trigger>
               <.icon name="hero-arrow-up" />
             </:prev_trigger>
@@ -62,7 +67,12 @@ defmodule E2eWeb.CarouselLive do
         </section>
         <section>
           <h3 class="font-ui-lg mb-micro">Slides per page (2)</h3>
-          <.carousel id="carousel-multiple" items={@carousel_items} slides_per_page={2} class="carousel">
+          <.carousel
+            id="carousel-multiple"
+            items={@carousel_items}
+            slides_per_page={2}
+            class="carousel"
+          >
             <:prev_trigger>
               <.icon name="hero-arrow-left" />
             </:prev_trigger>
