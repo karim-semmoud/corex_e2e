@@ -46,6 +46,7 @@ defmodule E2e.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 4.1"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:phoenix_live_dashboard, "~> 0.8.3"},
       {:phoenix_live_view, "~> 1.1.0"},
       {:live_capture, "~> 0.2"},
       {:lazy_html, ">= 0.1.0", only: :test},
