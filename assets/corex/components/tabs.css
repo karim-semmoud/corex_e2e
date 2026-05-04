@@ -1,14 +1,20 @@
 @import "../main.css";
 
 @layer components {
+  .tabs {
+    width: 100%;
+    max-width: none;
+  }
+
   .tabs [data-scope="tabs"][data-part="root"] {
     @apply ui-root;
-
-    max-width: var(--container-ui);
+    gap: --spacing(4);
   }
 
   .tabs [data-scope="tabs"][data-part="root"][data-orientation="vertical"] {
     flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
   }
 
   .tabs [data-scope="tabs"][data-part="root"][data-orientation="horizontal"] {
@@ -16,19 +22,27 @@
   }
 
   .tabs [data-scope="tabs"][data-part="list"] {
-    display: inline-flex;
-    background-color: var(--color-ui--border);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--color-border);
     gap: 1px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: auto;
     width: fit-content;
-    border: 1px solid var(--color-ui--border);
-    border-radius: var(--radius-ui);
-    overflow: hidden;
   }
 
   .tabs [data-scope="tabs"][data-part="list"][data-orientation="vertical"] {
     flex-direction: column;
     height: fit-content;
-    width: var(--container-micro);
+    flex-shrink: 0;
+    min-width: max-content;
+    align-self: flex-start;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: max-content;
   }
 
   .tabs [data-scope="tabs"][data-part="list"][data-orientation="horizontal"] {
@@ -37,42 +51,223 @@
 
   .tabs [data-scope="tabs"][data-part="content"] {
     @apply ui-content;
+    width: 100%;
+  }
 
-    border: 1px solid var(--color-ui--border);
-    border-radius: var(--radius-ui);
-    padding: var(--spacing-ui-padding);
-
-    & p {
-      margin-block: 0;
-    }
+  .tabs [data-scope="tabs"][data-part="content"][data-orientation="vertical"] {
+    flex: 1 1 0%;
+    min-width: 0;
+    width: auto;
   }
 
   .tabs [data-scope="tabs"][data-part="trigger"] {
     @apply ui-item;
+    width: fit-content;
+    max-width: none;
+  }
 
-    width: auto;
+  .tabs [data-scope="tabs"][data-part="trigger"][data-orientation="vertical"] {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    justify-content: flex-start;
+  }
+
+  .tabs [data-scope="tabs"][data-part="indicator"] {  
+    --transition-duration: 0.2s;
+    --transition-timing-function: ease-in-out;
+  
+    background-color: var(--color-ink);
+    z-index: 10;
+  
+    &[data-orientation="horizontal"] {
+      height: 4px;
+      width: var(--width);
+  
+      bottom: 0;
+      top: auto !important;
+    }
+  
+    &[data-orientation="vertical"] {
+      width: 4px;
+      height: var(--height);
+      top: var(--top);
+    }
   }
 }
 
-@utility tabs--* {
+@utility tabs--sm {
   [data-scope="tabs"][data-part="root"] {
-    max-width: --value(--container-ui-*, [length]);
-    gap: --value(--spacing-ui-gap-*, [length]);
+    gap: var(--spacing-space-sm);
+  }
+}
+
+@utility tabs--md {
+  [data-scope="tabs"][data-part="root"] {
+    gap: var(--spacing-space-md);
+  }
+}
+
+@utility tabs--lg {
+  [data-scope="tabs"][data-part="root"] {
+    gap: var(--spacing-space-lg);
+  }
+}
+
+@utility tabs--xl {
+  [data-scope="tabs"][data-part="root"] {
+    gap: var(--spacing-space-xl);
+  }
+}
+
+@utility tabs--text-* {
+  [data-scope="tabs"][data-part="trigger"] {
+    font-size: --value(--text-*, [length]);
+    line-height: --value(--text-*--line-height, [length]);
   }
 
-  [data-scope="tabs"][data-part="trigger"] {
-    font-size: --value(--text-ui-*, [length]);
-    line-height: --value(--text-ui-* --line-height, [length]);
-    min-height: --value(--spacing-ui-*, [length]);
+  [data-scope="tabs"][data-part="content"] {
+    font-size: --value(--text-*, [length]);
+    line-height: --value(--text-*--line-height, [length]);
+  }
+}
 
-    &[data-selected] {
-      background-color: --value(--color-ui-*, [color]);
-      color: --value(--color-ui-* --text, [color]);
+@utility tabs--rounded-* {
+  [data-scope="tabs"][data-part="list"] {
+    border-radius: --value(--radius-*, [length]);
+  }
+
+  [data-scope="tabs"][data-part="content"] {
+    border-radius: --value(--radius-*, [length]);
+  }
+}
+
+@utility tabs--accent {
+  [data-scope="tabs"][data-part="trigger"][data-selected] {
+    background-color: var(--color-accent);
+    color: var(--color-accent-ink);
+
+    &:hover {
+      background-color: var(--color-accent-hover);
+    }
+
+    &:active {
+      background-color: var(--color-accent-active);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: inset 0 0 0 2px var(--color-accent-ink);
+    }
+
+    &:disabled,
+    &[data-disabled],
+    &[disabled] {
+      background-color: var(--color-accent-muted);
     }
   }
+}
 
-  [data-scope="tabs"][data-part="content"] > p {
-    font-size: --value(--text-ui-*, [length]);
-    line-height: --value(--text-ui-* --line-height, [length]);
+@utility tabs--brand {
+  [data-scope="tabs"][data-part="trigger"][data-selected] {
+    background-color: var(--color-brand);
+    color: var(--color-brand-ink);
+
+    &:hover {
+      background-color: var(--color-brand-hover);
+    }
+
+    &:active {
+      background-color: var(--color-brand-active);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: inset 0 0 0 2px var(--color-brand-ink);
+    }
+
+    &:disabled,
+    &[data-disabled],
+    &[disabled] {
+      background-color: var(--color-brand-muted);
+    }
+  }
+}
+
+@utility tabs--alert {
+  [data-scope="tabs"][data-part="trigger"][data-selected] {
+    background-color: var(--color-alert);
+    color: var(--color-alert-ink);
+
+    &:hover {
+      background-color: var(--color-alert-hover);
+    }
+
+    &:active {
+      background-color: var(--color-alert-active);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: inset 0 0 0 2px var(--color-alert-ink);
+    }
+
+    &:disabled,
+    &[data-disabled],
+    &[disabled] {
+      background-color: var(--color-alert-muted);
+    }
+  }
+}
+
+@utility tabs--info {
+  [data-scope="tabs"][data-part="trigger"][data-selected] {
+    background-color: var(--color-info);
+    color: var(--color-info-ink);
+
+    &:hover {
+      background-color: var(--color-info-hover);
+    }
+
+    &:active {
+      background-color: var(--color-info-active);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: inset 0 0 0 2px var(--color-info-ink);
+    }
+
+    &:disabled,
+    &[data-disabled],
+    &[disabled] {
+      background-color: var(--color-info-muted);
+    }
+  }
+}
+
+@utility tabs--success {
+  [data-scope="tabs"][data-part="trigger"][data-selected] {
+    background-color: var(--color-success);
+    color: var(--color-success-ink);
+
+    &:hover {
+      background-color: var(--color-success-hover);
+    }
+
+    &:active {
+      background-color: var(--color-success-active);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: inset 0 0 0 2px var(--color-success-ink);
+    }
+
+    &:disabled,
+    &[data-disabled],
+    &[disabled] {
+      background-color: var(--color-success-muted);
+    }
   }
 }
