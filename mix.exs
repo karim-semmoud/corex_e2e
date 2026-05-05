@@ -131,6 +131,7 @@ defmodule E2e.MixProject do
       ],
       "assets.deploy": [
         "compile",
+        "localize.download_locales",
         "designex corex",
         "tailwind e2e --minify",
         "esbuild e2e --minify",
