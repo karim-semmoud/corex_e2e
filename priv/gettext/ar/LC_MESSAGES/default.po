@@ -11,28 +11,27 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
 
-#: lib/e2e_web/components/app/header.ex:136
+#: lib/e2e_web/components/app/header.ex:134
 #, elixir-autogen, elixir-format
 msgid "Components"
 msgstr ""
 
-#: lib/e2e_web/components/app/header.ex:101
+#: lib/e2e_web/components/app/header.ex:98
 #, elixir-autogen, elixir-format
 msgid "Display settings"
 msgstr ""
 
-#: lib/e2e_web/components/app/header.ex:75
-#: lib/e2e_web/components/app/header.ex:143
+#: lib/e2e_web/components/app/header.ex:148
 #, elixir-autogen, elixir-format
 msgid "Documentation"
 msgstr ""
 
-#: lib/e2e_web/live/pages_live/home_live.ex:155
+#: lib/e2e_web/live/pages_live/home_live.ex:146
 #, elixir-autogen, elixir-format
 msgid "Interactive preview"
 msgstr ""
 
-#: lib/e2e_web/components/app/header.ex:130
+#: lib/e2e_web/components/app/header.ex:127
 #, elixir-autogen, elixir-format
 msgid "Main"
 msgstr ""
@@ -60,53 +59,149 @@ msgstr ""
 msgid "We're trying to reconnect you..."
 msgstr ""
 
-#: lib/e2e_web/components/app/header.ex:66
-#, elixir-autogen, elixir-format, fuzzy
-msgid "Documentation links"
-msgstr ""
-
-#: lib/e2e_web/components/app/header.ex:150
+#: lib/e2e_web/components/app/header.ex:156
+#: lib/e2e_web/components/app/header.ex:202
 #, elixir-autogen, elixir-format
 msgid "MCP"
 msgstr ""
 
-#: lib/e2e_web/live/pages_live/home_live.ex:142
-#: lib/e2e_web/live/pages_live/home_live.ex:288
+#: lib/e2e_web/live/pages_live/home_live.ex:131
+#: lib/e2e_web/live/pages_live/home_live.ex:364
 #, elixir-autogen, elixir-format
 msgid "Browse components"
 msgstr ""
 
-#: lib/e2e_web/live/pages_live/home_live.ex:280
-#, elixir-autogen, elixir-format
-msgid "Get started"
-msgstr ""
-
-#: lib/e2e_web/live/pages_live/home_live.ex:304
-#, elixir-autogen, elixir-format
-msgid "Visit GitHub"
-msgstr ""
-
-#: lib/e2e_web/live/pages_live/home_live.ex:296
+#: lib/e2e_web/live/pages_live/home_live.ex:139
 #, elixir-autogen, elixir-format
 msgid "Visit Hexdocs"
 msgstr ""
 
-#: lib/e2e_web/components/app/header.ex:185
+#: lib/e2e_web/components/app/header.ex:195
 #, elixir-autogen, elixir-format
 msgid "Dark Mode"
 msgstr ""
 
-#: lib/e2e_web/components/app/header.ex:167
+#: lib/e2e_web/components/app/header.ex:174
 #, elixir-autogen, elixir-format
 msgid "Installation"
 msgstr ""
 
-#: lib/e2e_web/components/app/header.ex:173
+#: lib/e2e_web/components/app/header.ex:181
 #, elixir-autogen, elixir-format
 msgid "Localize"
 msgstr ""
 
-#: lib/e2e_web/components/app/header.ex:179
+#: lib/e2e_web/components/app/header.ex:188
 #, elixir-autogen, elixir-format
 msgid "Theming"
+msgstr ""
+
+#: lib/e2e_web/live/pages_live/home_live.ex:261
+#, elixir-autogen, elixir-format
+msgid "Corex by the numbers"
+msgstr ""
+
+#: lib/e2e_web/components/layouts/captures.html.heex:97
+#: lib/e2e_web/components/layouts/root.html.heex:97
+#, elixir-autogen, elixir-format
+msgid "Skip to content"
+msgstr "تخطي إلى المحتوى"
+
+#: lib/e2e_web/live/pages_live/home_live.ex:372
+#, elixir-autogen, elixir-format
+msgid "Star on GitHub"
+msgstr ""
+
+#: lib/e2e_web/components/app/header.ex:141
+#: lib/e2e_web/components/app/header.ex:209
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Templates"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_controller.ex:1815
+#, elixir-autogen, elixir-format
+msgid "Templates · Corex"
+msgstr ""
+
+#: lib/e2e_web/components/app/header.ex:79
+#, elixir-autogen, elixir-format
+msgid "Corex Links"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:66
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:118
+#, elixir-autogen, elixir-format
+msgid "GitHub"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:58
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:110
+#, elixir-autogen, elixir-format
+msgid "Live demo"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:29
+#, elixir-autogen, elixir-format
+msgid "Soonex preview slides"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_controller.ex:1806
+#, elixir-autogen, elixir-format
+msgid "Hero section"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_controller.ex:1809
+#, elixir-autogen, elixir-format
+msgid "Highlights section"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:75
+#, elixir-autogen, elixir-format
+msgid "Locales & RTL"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:14
+#, elixir-autogen, elixir-format
+msgid "Production-ready coming-soon sites: Tableau export, shared tokens, Markdown posts, and Corex components. Choose English-first Soonex or Soonex i18n with locales and RTL."
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:99
+#, elixir-autogen, elixir-format
+msgid "Same Soonex surface with Gettext and Localize: Arabic, English, and French out of the box, RTL-aware controls, and the same static build pipeline."
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:47
+#, elixir-autogen, elixir-format
+msgid "Single-locale coming-soon layout with Neo through Leo themes, Markdown journal, waitlist, and static assets sized for GitHub Pages or any CDN."
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:44
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Soonex"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:96
+#, elixir-autogen, elixir-format
+msgid "Soonex i18n"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:81
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Soonex i18n preview slides"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:23
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Starter kit"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_html/templates_page.html.heex:9
+#, elixir-autogen, elixir-format
+msgid "Static Tableau starters with Corex"
+msgstr ""
+
+#: lib/e2e_web/controllers/page_controller.ex:1811
+#, elixir-autogen, elixir-format
+msgid "Waitlist section"
 msgstr ""

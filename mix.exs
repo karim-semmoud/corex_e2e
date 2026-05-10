@@ -69,7 +69,7 @@ defmodule E2e.MixProject do
       {:color, "~> 0.11"},
       {:dns_cluster, "~> 0.2.0"},
       {:bandit, "~> 1.5"},
-      {:corex, "~> 0.1.0-beta.2"},
+      {:corex, "~> 0.1.0-beta.4"},
       {:makeup, "~> 1.2"},
       {:makeup_elixir, "~> 1.0.1 or ~> 1.1"},
       {:makeup_html, "~> 0.2"},
@@ -131,7 +131,6 @@ defmodule E2e.MixProject do
       ],
       "assets.deploy": [
         "compile",
-        "localize.download_locales",
         "designex corex",
         "tailwind e2e --minify",
         "esbuild e2e --minify",
