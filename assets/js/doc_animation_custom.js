@@ -8,7 +8,7 @@ import {
   animateHeightClose,
   animateScaleOpen,
   animateScaleClose,
-} from "../../../"
+} from "corex"
 
 const reducedMotion = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches
