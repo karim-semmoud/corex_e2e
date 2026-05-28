@@ -20,14 +20,11 @@
 +MPas aobf
 +MDas aobf
 +MFas aobf
-+MBacul 0
-+MHacul 0
++MBacul de
++MHacul de
 +MBsmbcs 64
 +MBlmbcs 128
 +MHsmbcs 64
 +MHlmbcs 128
 +MMscs 20
 +SDcpu 2:2
-+sbwt none
-+sbwtdcpu none
-+sbwtdio none
