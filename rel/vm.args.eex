@@ -13,18 +13,3 @@
 
 ## Tweak GC to run more often
 +env ERL_FULLSWEEPAFTER 10
-
-## Low-RAM / free-tier allocator tuning (return memory to OS faster)
-+MBas aobf
-+MHas aobf
-+MPas aobf
-+MDas aobf
-+MFas aobf
-+MBacul de
-+MHacul de
-+MBsmbcs 64
-+MBlmbcs 128
-+MHsmbcs 64
-+MHlmbcs 128
-+MMscs 20
-+SDcpu 2:2
